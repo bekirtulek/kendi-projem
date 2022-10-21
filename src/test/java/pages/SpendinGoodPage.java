@@ -104,14 +104,16 @@ public List<WebElement> miniAddToCartButon;
 public List<WebElement>us_03_UrunListesi;
  @FindBy(xpath = "//*[@class='btn btn-dark btn-rounded btn-icon-right continue-shopping mb-4 mt-6']")
  public WebElement ordersGoShopButon;
-
-
-
-
-
-
-
-
+ @FindBy(xpath = "(//*[@class='cart-count'])[1]")
+ public WebElement cartButonu;
+@FindBy(xpath = "(//*[@class='fas fa-times'])[1]")
+public WebElement sepettenUrunSilme;
+@FindBy(xpath = "//*[@class='button checkout wc-forward']")
+public WebElement checkoutButon;
+@FindBy(xpath = "//*[@id='billing_first_name']")
+public WebElement billingDetailsFistnameTextBox;
+@FindBy(xpath = "//*[@id='billing_address_1']")
+public WebElement streetAddressTextBox;
 
 
 
