@@ -1,12 +1,13 @@
 package pages;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.ConfigReader;
 import utilities.Driver;
-
 import java.util.List;
+
+
+
 
 public class SpendinGoodPage {
 
@@ -97,12 +98,12 @@ public class SpendinGoodPage {
 
 
     /*US_03(101. ile 139.satır)*/
-
-
-
-
-
-
+@FindBy(xpath = "//*[@class='btn-product-icon product_type_simple add_to_cart_button ajax_add_to_cart']")
+public List<WebElement> miniAddToCartButon;
+@FindBy(xpath = "//*[@class='product-wrap']")
+public List<WebElement>us_03_UrunListesi;
+ @FindBy(xpath = "//*[@class='btn btn-dark btn-rounded btn-icon-right continue-shopping mb-4 mt-6']")
+ public WebElement ordersGoShopButon;
 
 
 
