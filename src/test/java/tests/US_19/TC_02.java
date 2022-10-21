@@ -3,7 +3,7 @@ package tests.US_19;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
-import page.SpendinGoodPage;
+import pages.SpendinGoodPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
 

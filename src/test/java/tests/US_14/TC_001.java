@@ -1,7 +1,7 @@
 package tests.US_14;
 
 import org.testng.annotations.Test;
-import page.SpendinGoodPage;
+import pages.SpendinGoodPage;
 import tests.US_13.TC_01;
 
 public class TC_001 extends TC_01 {
