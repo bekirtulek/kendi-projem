@@ -3,6 +3,7 @@ package tests.US_12;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.SpendinGoodPage;
 import utilities.ConfigReader;
@@ -10,7 +11,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
-public class US_12_TC_005 extends TestBaseRapor {
+public class US_12_TC_007 extends TestBaseRapor {
     SpendinGoodPage spendinGoodPage;
     Actions actions;
     @Test
@@ -37,7 +38,8 @@ public class US_12_TC_005 extends TestBaseRapor {
                 .sendKeys(ConfigReader.getProperty("bekirFirstname1"))
                 .sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("bekirLastname1"))
                 .sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("bekirDisplayname1"))
-                .sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.TAB)
+                .sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("bekirEmail2"))
+                .sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("bekirPassword1"))
                 .sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("bekirPassword2"))
                 .sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("bekirPassword2"))
@@ -46,10 +48,9 @@ public class US_12_TC_005 extends TestBaseRapor {
         ReusableMethods.waitForVisibility(spendinGoodPage.updateSuccessfulMessage,5);
         Assert.assertTrue(spendinGoodPage.updateSuccessfulMessage.isDisplayed());
         extentTest.pass("Hesap bilgisi ve eposta adresi update edildigi goruldu");
-        Driver.closeDriver();//  TODO projeye eklerken driver.close kaldirmayi unutma
+        Driver.closeDriver();
     }
 
-    //@Ignore   // TODO proje sunumunda aktif hale getir.
     @Test
     public void tc_005_02() {
         spendinGoodPage=new SpendinGoodPage();
@@ -58,7 +59,7 @@ public class US_12_TC_005 extends TestBaseRapor {
                 ,"Hesap bilgisi ve eposta adresini update edildigini gorebilme");
         Driver.getDriver().get(ConfigReader.getProperty("spendingGoodUrl"));
         spendinGoodPage.signInButton.click();
-        spendinGoodPage.emailAdresBox.sendKeys(ConfigReader.getProperty("bekirEmail"));
+        spendinGoodPage.emailAdresBox.sendKeys(ConfigReader.getProperty("bekirEmail2"));
         spendinGoodPage.passwordBox.sendKeys(ConfigReader.getProperty("bekirPassword2"));
         spendinGoodPage.signInButton2.click();
         extentTest.info("Login olundu");
@@ -74,7 +75,8 @@ public class US_12_TC_005 extends TestBaseRapor {
                 .sendKeys(ConfigReader.getProperty("bekirFirstname2"))
                 .sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("bekirLastname2"))
                 .sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("bekirDisplayname2"))
-                .sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.TAB)
+                .sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("bekirEmail"))
+                .sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("bekirPassword2"))
                 .sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("bekirPassword1"))
                 .sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("bekirPassword1"))

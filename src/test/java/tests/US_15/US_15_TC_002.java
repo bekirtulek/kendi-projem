@@ -53,9 +53,9 @@ public class US_15_TC_002 extends TestBaseRapor {
         extentTest.info("Submit butonuna basildi");
         //ReusableMethods.jsExecutorScrool(spendinGoodPage.couponSuccessfullyPublishedMessage);
         ReusableMethods.waitForVisibility(spendinGoodPage.couponSuccessfullyPublishedMessage,15);
-        String exceptionText="Coupon Successfully Published.";
+        String expectedText="Coupon Successfully Published.";
         String actualText=spendinGoodPage.couponSuccessfullyPublishedMessage.getText();
-        Assert.assertEquals(exceptionText,actualText);
+        Assert.assertEquals(expectedText,actualText);
         extentTest.pass("Belli urunlere kupon kullanim limiti uygulandigi goruldu");
 
 

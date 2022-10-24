@@ -113,29 +113,27 @@ public WebElement checkoutButon;
 @FindBy(xpath = "//*[@id='billing_first_name']")
 public WebElement billingDetailsFistnameTextBox;
 @FindBy(xpath = "//*[@id='billing_address_1']")
-public WebElement streetAddressTextBox;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+public WebElement billingDetailsStreetAddressTextBox;
+@FindBy(xpath = "//*[text()='Thank you. Your order has been received.']")
+public WebElement orderCompletedText;
+ @FindBy(xpath = "//*[@id='payment_method_cod']")
+ public WebElement payAtTheDoorRadioButon;
+ @FindBy(xpath = "//*[@id='place_order']")
+ public WebElement placeOrderButon;
+ @FindBy (xpath="//*[@name='billing_last_name']")
+ public  WebElement billingDetailsLastNameTextBox;
+ @FindBy (xpath="//*[@name='billing_company']")
+ public  WebElement billingDetailsCompanyTextBox;
+ @FindBy (xpath="//*[@name='billing_postcode']")
+ public  WebElement billingDetailsPostCodeTextBox;
+ @FindBy (xpath="//*[@name='billing_city']")
+ public  WebElement billingDetailsCityTextBox;
+ @FindBy (xpath="//*[@name='billing_phone']")
+ public  WebElement billingDetailsPhoneTextBox;
+ @FindBy (id="select2-billing_state-container']")
+ public  List<WebElement> billingDetailsProvinceDDM;
+ @FindBy (id="select2-billing_country-container")
+ public List<WebElement> billingDetailsCountryDDM;
 
 
 
