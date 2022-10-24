@@ -1,4 +1,4 @@
-package pages;
+package page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -134,15 +134,16 @@ public WebElement orderCompletedText;
  public  List<WebElement> billingDetailsProvinceDDM;
  @FindBy (id="select2-billing_country-container")
  public List<WebElement> billingDetailsCountryDDM;
-
-
-
-    /*US_04(141. ile 179.satır)*/
-
-
-
-
-
+@FindBy(xpath = "//*[@class='button wc-forward']")
+public WebElement viewCartButon;
+@FindBy(xpath = "//td[1][@class='product-thumbnail']")
+public List<WebElement> sepettekiUrunList;
+@FindBy(xpath = "//*[@class='quantity-minus w-icon-minus']")
+public List<WebElement> urunAzaltmaList;
+@FindBy(xpath = "quantity-plus w-icon-plus")
+public List<WebElement> urunArttirmaList;
+@FindBy(xpath = "//*[@name='update_cart']")
+public WebElement updateCartButon;
 
 
 

@@ -2,7 +2,7 @@ package tests.US_16;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.SpendinGoodPage;
+import page.SpendinGoodPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
